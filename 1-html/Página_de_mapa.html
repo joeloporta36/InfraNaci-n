@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mapa de Reportes</title>
+
+        <!-- Leaflet CSS Leaflet es una librería de JavaScript que sirve para crear mapas interactivos en páginas web.-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+        
+        <style>
+            body{
+                font-family: Arial;
+                margin: 0;
+            }
+
+            header{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                background: #2c3e50;
+                color: white;
+            }
+
+            nav a{
+                color: white;
+                margin-left: 10px;
+                text-decoration: none;
+            }
+
+            main{
+                padding: 20px;
+            }
+            #map{
+                height: 400px;
+                margin-top: 20px;
+                border: 2px solid #ccc;
+            }
+
+            select{
+                margin-right: 10px;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+    <header>
+        <div>Logo</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Mapa</a>
+            <a href="#">Perfil</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Mapa de Reportes</h1>
+
+        <!--FILTROS-->
+        <div>
+            <select>
+                <option>Tipo</option>
+                <option>Huecos</option>
+                <option>Basura</option>
+                <option>Semáforos</option>
+            </select>
+
+            <select>
+                <option>Estado</option>
+                <option>Pendientes</option>
+                <option>En revisión</option>
+                <option>Resuelto</option>
+            </select>
+
+            <select>
+                <option>Cantón</option>
+                <option>San José</option>
+                <option>Alajuela</option>
+                <option>Heredia</option>
+            </select>
+        </div>
+
+        <!--MAPA-->
+        <div id="map"></div>
+
+        <!--REPORTES-->
+        <h2>Reportes Recientes</h2>
+        <ul>
+            <li>Hueco - San José</li>
+            <li>Basura - Heredia</li>
+            <li>Semáforo - Alajuela</li>
+        </ul>
+    </main>
+
+    <!--LEAFLET JS-->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        //Crear mapa centrado en Costa Rica
+        var map = L.map('map').setView([9.7489, -83.7534], 8);
+
+        //Cargar mapa(OpenStreeetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+
+        //Marcadores de ejemplo (simulan reportes)[ ]
+        L.marker([9.93, -84.08]).addTo(map)
+        .bindPopup("Hueco en San José");
+
+        L.marker([10.0, -84.2]).addTo(map)
+        .bindPopup("Basura en Alajuela");
+
+        L.marker([9.98, -84.12]).addTo(map)
+        .bindPopup("Semáforo dañado");
+    </script>
+    
+    </body>
+</html>
