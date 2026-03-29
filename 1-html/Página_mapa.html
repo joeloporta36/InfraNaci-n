@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mapa - InfraCR</title>
+        <link rel="stylesheet" href="../2-css/Página_mapa.css">
+    </head>
+
+    <body>
+
+    <!-- NAVBAR (BARRA DE NAVEGACIÓN) -->
+    <nav>
+        <div class="logo">InfraCR</div>
+        <div class="menu">
+            <a href="#">Inicio</a>
+            <a href="#" class="activo">Mapa</a>
+            <a href="#">Perfil</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- FILTROS -->
+        <div class="filtros">
+            <select id="tipo">
+                <option value="">Tipo</option>
+                <option>Hueco</option>
+                <option>Basura</option>
+                <option>Semáforo</option>
+            </select>
+
+            <select id="estado">
+                <option value="">Estado</option>
+                <option>Pendiente</option>
+                <option>En Revisión</option>
+                <option>Resuelto</option>
+            </select>
+
+            <select id="canton">
+                <option value="">Cantón</option>
+                <option>San José</option>
+                <option>Heredia</option>
+                <option>Alajuela</option>
+            </select>
+        </div>
+
+        <!-- MAPA -->
+        <div class="mapa" id="mapa"></div>
+
+        <!-- RPORTES -->
+        <h2>Reportes Reciente</h2>
+        <div id="reportes"></div>
+    
+    </div>
+
+    <script src="../3-Js/de_página_del_mapa.js"></script>
+    </body>
+</html>
+<!-- SE NECESITA AGREGAR UNA IMAGEN  -->

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+    font-family: Arial;
+}
+body {
+    background: #f4f6f9;
+}
+/* NAVBAR ( BARRA DE NAVEGACIÓN) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #2c3e50;
+    color: white;
+}
+.menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.activo {
+    border-bottom: 2px solid #3498db;
+}
+
+/* CONTENEDOR */
+.container {
+    padding: 30px;
+}
+/* FILTROS */
+.filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.filtros select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+/* MAPA */
+.mapa {
+    height: 300px;
+    background: linear-gradient(135deg, #dfe6e9);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+/* PIN  (.pin: es la clase que representa los marcadores del mapa) */
+.pin {
+    width: 18px;
+    height: 18px;
+    background: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+}
+/* REPORTES */
+h2 {
+    margin: 25px 0 15px;
+}
+.card{
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.estado {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+}
+.pendiente{background: #e74c3c};
+.revision{background: #f39c12};
+.resuelto{background: #2ecc71};
