@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>InfraCR Admin</title>
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../2-css/panel_admin.css">
+<!-- CHART -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">
+        <div class="logo-box">A</div>
+        <strong>Administrador</strong>
+    </div>
+
+    <ul class="menu">
+        <li class="active"><i class="fa fa-home"></i>Panel</li>
+        <li><i class="fa fa-envelope"></i>Correos Electrónicos</li>
+        <li><i class="fa fa-chart-bar"></i>Gráficos</li>
+        <li><i class="fa fa-map"></i>Mapa</li>
+    </ul>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+<header class="topbar">
+    <input type="text" placeholder="Buscar...">
+    <div><i class="fa fa-user"></i></div>
+</header>
+
+<!-- CARDS -->
+<section class="cards">
+    <div class="card">
+        <span>Total Reportes</span>
+        <h2>1200</h2>
+    </div>
+    <div class="card">
+        <span>Pendientes</span>
+        <h2>200</h2>
+    </div>
+    <div class="card">
+        <span>Resueltos</span>
+        <h2>800</h2>
+    </div>
+    <div class="card">
+        <span>Críticos</span>
+        <h2>50</h2>
+    </div>
+</section>
+
+<!-- GRID -->
+<div class="grid">
+
+    <!-- MAPA -->
+    <div>
+        <h3>Mapa de Costa Rica</h3>
+        <div id="map"></div>
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="side-panel">
+        <h3>Actividad</h3>
+        <p>Reportes nuevos hoy: 12</p>
+        <p>Usuarios activos: 5</p>
+    </div>
+
+</div>
+
+<!-- CHART -->
+<br>
+<canvas id="chart"></canvas>
+
+</div>
+
+</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+// MAPA
+var map = L.map('map').setView([9.9281, -84.0907], 7);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+// CHART
+new Chart(document.getElementById("chart"), {
+    type: 'line',
+    data: {
+        labels: ["Ene","Feb","Mar","Abr","May"],
+        datasets: [{
+            label: "Reportes",
+            data: [10, 20, 30, 25, 40]
+        }]
+    }
+});
+</script>
+
+</body>
+</html>
