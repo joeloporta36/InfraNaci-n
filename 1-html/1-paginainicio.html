@@ -9,22 +9,31 @@
 <body>
     
   <header>
-    <div class="menu">
+    <div class="nav-menu">
       <div class="logo-pagina-principal">
         <img src="/4-img/logo.png" alt="Logo de InfraNación">
         <h1>InfraNación</h1>
 
+      <button class="hamburguesa" id="hamburguesa">
+      <span></span>
+      <span></span>
+      <span></span>
+    
+      </button>
+
       </div>
-      <div class="menu">
+      <nav class="menu"
+       id="menu">
+
         <ul>
-     <li><a href="#">Inicio</a></li>
-     <li><a href="/1-html/reportes.html">Reportar</a></li>
-     <li><a href="#">Mapa</a></li>
-     <li><a href="/1-html/2-loguin.html">Iniciar Sesión</a></li>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="/1-html/3-reportes.html">Reportar</a></li>
+    <li><a href="/1-html/Página_de_mapa.html">Mapa</a></li>
+    <li><a href="/1-html/2-loguin.html">Iniciar Sesión</a></li>
         </ul>
 
 
-      </div>
+      </nav>
     </div>
   </header>
 <!--Contenido principal-->
@@ -32,27 +41,24 @@
 <!--HERO-->
 
 <section class="hero">
-  <div class="container hero">
+
+  <div class="hero-bg"></div>
+
+  <div class="container">
     <div class="hero-text">
-      <h2>¡Ayudanos a mejorar nuestro pais!</h2>
-      <p>Envia reportes de huecos, semaforos dañados, basura acumulada</p>
+      <h2 class="mensaje1">¡Ayudanos a mejorar nuestro pais!</h2>
+      <p class="mensaje2">Envia reportes de huecos, semaforos dañados, basura acumulada, etc.</p>
 
-    </div>
+    
     <div class="hero-buttons">
-      <button>
-      <a href="#" class="btn-primary">Reportar un problema</a>
-      
-      </button>
-      <button>
-        <a href="#" class="btn-secondary">Ver reportes</a>
-      </button>
+      <a href="/1-html/3-reportes.html" class="btn-primary">Reportar un problema</a>
+
+        <a href="/1-html/Página_de_mapa.html" class="btn-secondary">Ver reportes</a>
     </div>
   </div>
-  <div class="hero-image">
-    <img src="/4-img/banner.jpg" alt="Banner INFRANACIÓN">
 
+ 
   </div>
-
 </section >
 
 <div class="Categorias">
@@ -72,7 +78,7 @@
 
 
 <!--CÓMO FUNCIONA- flaama flama-->
-<section class="como-funciona?">
+<section class="como-funciona">
   <div class="Paso1">
     <h2>1</h2>
     <h4>Reportar el problema</h4>
@@ -93,7 +99,7 @@
 <section class="impacto">
   <div class="container">
     <h2>Impacto del sistema</h2>
-
+<div class="stats-contenedor">
     <div class="stats">
       <h3>3.200</h3>
       <p>Reportes solucionados</p>
@@ -102,6 +108,7 @@
       <h3>80+</h3>
       <p>Municipalidades activas</p>
     </div>
+  </div>
   </div>
 </section>
 <!--Municipalidas 🔥🔥-->
@@ -122,6 +129,6 @@
   
 
   </footer>
-  <script src="/3-Js/inicio.js"></script>
+ <script src="/3-Js/inicio.js"></script>
 </body>
 </html>
