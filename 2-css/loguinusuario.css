@@ -1,0 +1,111 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,  #0f2d5c,  #0945a5);
+    min-height: 100vh;
+}
+.login-usuario-container{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+}
+.login-box{
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 100);
+    border-radius: 20px;
+    padding: 35px;
+}
+.logo-loguin{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding: 15px 25px;
+    border-bottom: 1px solid #d1d5db; /* 👈 LA LÍNEA */
+}
+.logo-loguin h2{
+    color: #4b5563;
+    font-size: 20px;
+    
+}
+
+.logo-loguin img{
+    width: 42px;
+    height: auto;
+}
+#form-usuario h3{
+    font-size: 30px;
+  
+}
+#form-usuario{
+    padding: 6px;
+}
+#form-usuario{
+    display: flex;
+    flex-direction: column;
+}
+#form-usuario{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+#form-usuario label{
+    margin-bottom: 12px;
+    font-weight: bold;
+    color:#4b5563;
+
+}
+#form-usuario input{
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+#form-usuario input:focus{
+    border-color: #b1c9f1;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+#form-usuario button{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: #0945a5;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#form-usuario button:hover{
+    background: #163172;
+}
+.enlaces{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.enlaces a{
+    text-decoration: none;
+    color: #1E3A8A;
+    font-weight: bold;
+}
+
+.enlaces a:hover{
+    text-decoration: underline;
+}
+
+.enlaces p{
+    margin-top: 12px;
+    color: #555;
+}
