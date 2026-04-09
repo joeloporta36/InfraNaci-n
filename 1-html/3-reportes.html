@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Reportes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfraNación - Reportes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
 
+<!-- HEADER -->
+<div class="header">
+<img src="e.jpeg" class="banner active">
+<img src="b.jpeg" class="banner">
+<img src="cr.jpeg" class="banner">
 
-    <!--===== NAVBAR =====-->
-    <header>
-        <div>Logo</div>
+<div class="header-content">
+<img src="logo1.jpeg" class="logo">
+<h1>InfraNación</h1>
+<p>Sistema moderno de reportes ciudadanos</p>
+</div>
+</div>
 
-        <nav>
-            <!--SE NECESITA MODIFICAR ESTA PARTE--> 
-            <a href="/1-index/1-paginainicio.html">Inicio</a>
-            <a href="/1-html/Página_de_mapa.html">Mapa</a>
-            <a href="#">Perfil</a>
-        </nav>
-    </header>
-    
-    <!-- ===== CONTENIDO PRINCIPAL =====-->
-    <main>
+<!-- NAV -->
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Mapa</a>
+<a href="#">Perfil</a>
+</nav>
 
-        <h1>Crear Nuevo Reporte</h1>
+<!-- FORM -->
+<div class="container">
+<div class="card">
 
-        <section>
+<div class="header-form">
+<div class="icon">!</div>
+<div>
+<h2>Nuevo Reporte</h2>
+<p class="sub">Cuéntanos qué está sucediendo.</p>
+</div>
+</div>
 
-            <!-- ===== FORMULARIO ===== -->
-            <form id="formReporte">
+<form onsubmit="enviar(event)">
 
-                <!-- Tipo -->
-                <label for="tipo">Tipo de problema</label><br>
-                <select id="tipo" name="tipo">
-                    <option value="">Seleccione una opción</option>
-                    <option value="hueco">Hueco</option>
-                    <option value="basura">Basura</option>
-                    <option value="semaforo">Semáforo</option>
-                    <option value="alumbrado">Alumbrado</option>
-                </select><br><br>
+<div class="input-group">
+<label>Tipo de problema</label>
+<select required>
+<option value="">Selecciona una opción</option>
+<option>Hueco</option>
+<option>Basura</option>
+<option>Semáforo</option>
+<option>Alumbrado</option>
+</select>
+</div>
 
-                <!-- DESCRIPCIÓN-->
-                <label for="descripcion">Descripción</label><br>
-                <textarea id="descripcion" name="descripcion" rows="4" cols="50" placeholder="Describe el problema..."></textarea><br><br>
+<div class="input-group">
+<label>Describe el problema</label>
+<textarea rows="4" placeholder="Explica..." required></textarea>
+</div>
 
-                <!-- Provincia -->
-                <label for="provincia">Provincia</label><br>
-                <select id="provincia" name="provincia">
-                    <option value="">Seleccione</option>
-                    <option>San José</option>
-                    <option>Alajuela</option>
-                    <option>Heredia</option>
-                    <option>Cartago</option>
-                    <option>Guanacaste</option>
-                    <option>Puntarenas</option>
-                    <option>Limón</option>
-                </select><br>
+<div class="input-group">
+<label>Dirección exacta</label>
+<input type="text" placeholder="Ubicación..." required>
+</div>
 
-                <!-- Cantón -->
-                <label for="canton">Cantón</label><br>
-                <select id="canton" name="canton">
-                    <option value="">Seleccione</option>
-                </select><br>
+<div class="file-box">
+<p>Haz clic para subir imagen</p>
+<input type="file" accept="image/*" onchange="preview(event)">
+</div>
 
-                <!-- Dirección -->
-                <label for="direccion">Dirección</label><br><br>
-                <input type="text" id="direccion" name="direccion" placeholder="ubicación exacta"><br><br>
+<div class="preview" id="preview"></div>
 
-                <!-- Imagen -->
-                <label for="imagen">Subir Imagen</label><br>
-                <input type="file" id="imagen" name="imagen"><br><br>
+<button class="btn">Enviar Reporte</button>
 
-                <!-- Botón -->
-                <button type="submit">Enviar Reporte</button>
+</form>
 
-            </form>
-            <!-- ===== MAPA (SIMULADO) ===== -->
-            <aside>
-                <p>Aquí irá el mapa</p>
-            </aside>
+</div>
+</div>
 
-        </section>
+<!-- MAPA -->
+<div class="mapa">
+<iframe src="https://maps.google.com/maps?q=San%20Jose&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
 
-    </main>
+<script src="script.js"></script>
 
 </body>
 </html>
