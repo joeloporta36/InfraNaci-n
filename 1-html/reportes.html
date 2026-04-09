@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfraCR - Reportes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/2-css/reportes.css">
+</head>
+<body>
+
+  <!-- LOGO Y TÍTULO -->
+  <div class="logo-container">
+    <img src="/4-img/logo.png" class="logo">
+    <h1>InfraCR</h1>
+    <p>Sistema moderno de reportes ciudadanos</p>
+  </div>
+
+  <!-- MENÚ -->
+  <div class="menu">
+    <a href="#">Inicio</a>
+    <a href="#">Mapa</a>
+    <a href="#">Perfil</a>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="container">
+    <div class="card">
+
+      <div class="header-form">
+        <div class="icon">!</div>
+        <div>
+          <h2>Nuevo Reporte</h2>
+          <p class="sub">Cuéntanos qué está sucediendo.</p>
+        </div>
+      </div>
+
+      <form onsubmit="enviar(event)">
+
+        <div class="input-group">
+          <label>Tipo de problema</label>
+          <select required>
+            <option value="">Selecciona una opción</option>
+            <option>Hueco</option>
+            <option>Basura</option>
+            <option>Semáforo</option>
+            <option>Alumbrado</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Describe el problema</label>
+          <textarea rows="4" placeholder="Explica..." required></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Dirección exacta</label>
+          <input type="text" placeholder="Ubicación..." required>
+        </div>
+
+        <div class="subir-imagen">
+          <p>Haz clic para subir imagen</p>
+          <input type="file" accept="image/*" onchange="preview(event)">
+        </div>
+
+        <div class="preview" id="preview"></div>
+
+        <button class="btn" type="submit">Enviar Reporte</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- MAPA -->
+  <div class="mapa">
+    <iframe src="https://maps.google.com/maps?q=San%20Jose&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
