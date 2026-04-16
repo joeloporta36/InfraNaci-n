@@ -3,21 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <title>Mapa - InfraCR</title>
-        <link rel="stylesheet" href="../2-css/Página_mapa.css">
+        <link rel="stylesheet" href="/public/css/Página_mapa.css">
     </head>
 
     <body>
+ <header>
+    <div class="nav-menu">
+      <div class="logo-pagina-principal">
+        <img src="/public/img/logo.png" alt="Logo de InfraNación">
+        <h1>InfraNación</h1>
 
-    <!-- NAVBAR (BARRA DE NAVEGACIÓN) -->
-    <nav>
-        <div class="logo">InfraCR</div>
-        <div class="menu">
-            <a href="/1-html/1-paginainicio.html">Inicio</a>
-            <a href="#" class="activo">Mapa</a>
-            <a href="#">Perfil</a>
-        </div>
-    </nav>
+      <button class="hamburguesa" id="hamburguesa">
+      <span></span>
+      <span></span>
+      <span></span>
+    
+      </button>
 
+      </div>
+      <nav class="menu"
+       id="menu">
+
+        <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="/src/views/1-html/reportes.html">Reportar</a></li>
+    <li><a href="/src/views/1-html/Página_mapa.html">Mapa</a></li>
+    <li><a href="/1-html/2-loguin.html">Iniciar Sesión</a></li>
+        </ul>
+
+
+      </nav>
+    </div>
+  </header>
     <div class="container">
 
         <!-- FILTROS -->
@@ -53,7 +70,7 @@
     
     </div>
 
-    <script src="../3-Js/de_página_del_mapa.js"></script>
+    <script src="/public/js/de_página_del_mapa.js"></script>
     </body>
 </html>
 <!-- SE NECESITA AGREGAR UNA IMAGEN  -->
